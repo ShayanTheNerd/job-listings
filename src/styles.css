@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* Hide the default arrows of number inputs */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		@apply appearance-none;
+	}
+	input[type='number'] {
+		appearance: textfield;
+		-moz-appearance: textfield;
+	}
+}
+
+@layer utilities {
+	.scrollbar-hidden {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	.scrollbar-hidden::-webkit-scrollbar {
+		@apply hidden;
+	}
+}

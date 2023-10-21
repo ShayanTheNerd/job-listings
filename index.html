@@ -1,0 +1,57 @@
+<!-- prettier-ignore -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="h-full [color-scheme:only_dark]">
+	<!-- prettier-ignore -->
+	<head>
+		<meta charset="UTF-8" />
+      <title>Budgety Expense Tracker</title>
+
+      <!-- General -->
+		<meta name="color-scheme" content="dark" />
+		<meta name="theme-color" content="#1e293b" />
+		<meta name="copyright" content="Shayan Zamani, 2023" />
+		<meta name="subject" content="Budgety - expense tracker SPA" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="author" content="Shayan Zamani, sh.zamani384@gmail.com" />
+      <meta name="keywords" content="budgetly expense tracker, incomes and expenses calculator, accounts table" />
+		<meta name="description" content="Budgetly is designed for caulculating and displaying your overal accounts (incomes and expenses) with an interactive UI." />
+
+      <!-- Open Graph -->
+		<meta property="og:title" content="Budgety Expense Tracker" />
+		<meta property="og:locale" content="en_us" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://budgetly-expense-tracker.netlify.app" />
+		<meta property="og:site_name" content="shayan-zamani.me" />
+		<meta property="og:description" content="Budgetly is designed for caulculating and displaying your overal accounts (incomes and expenses) with an interactive UI." />
+		<meta property="og:image" content="/og-img.webp" />
+		<meta property="og:image:type" content="webp" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="Budgetly Expense Tracker" />
+
+      <!-- Twitter card -->
+		<meta name="twitter:title" content="Budgety Expense Tracker" />
+		<meta name="twitter:url" content="https://budgetly-expense-tracker.netlify.app" />
+		<meta name="twitter:image" content="/og-img.webp" />
+		<meta name="twitter:image:alt" content="shayan-zamani.me" />
+		<meta name="twitter:site" content="@shayan-zamani.me" />
+		<meta name="twitter:description" content="Budgetly is designed for caulculating and displaying your overal accounts (incomes and expenses) with an interactive UI." />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script type="module" src="./src/app.js"></script>
+	</head>
+
+	<body class="relative flex h-full flex-col overflow-x-hidden bg-slate-800">
+		<header class="mx-3">
+			<h1
+				class="bg-gradient-to-br from-green-400 to-blue-400 bg-clip-text pb-6 pt-0.5 text-center text-3xl font-bold leading-normal text-transparent lg:pt-2.5 lg:text-4xl">
+				Budgetly Expense Tracker
+			</h1>
+		</header>
+
+		<main id="app" class="flex grow flex-col space-y-5"></main>
+
+		<noscript>JavaScript must be enabled for this website.</noscript>
+	</body>
+</html>
