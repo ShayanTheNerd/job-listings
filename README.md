@@ -1,34 +1,34 @@
-<h1>Budgetly</h1>
+<h1>Job Listings - A Frontend Mentor Challenge</h1>
 
 <p>
-   An intuitive expense tracker for easily managing your financial accounts.
+   Easily find the job you're looking for.
 </p>
 <figure>
-   <img src="https://github.com/ShayanTheNerd/budgetly/blob/main/og-img.webp" alt="Budgetly preview" />
+   <img src="https://github.com/ShayanTheNerd/job-listings/blob/main/og-img.webp" alt="Job Listings Preview" />
 </figure>
 
 <h2>Overview</h2>
 <h3>The challenge</h3>
 <p>Users should be able to:</p>
 <ul>
-   <li>Add or remove individual income or expense items containing a name followed by a value. Both adding and removing items will trigger smooth animations for all items in the list and also the calculated numbers.</li>
-   <li>See the total of incomes and expenses, the balance, and the percentage of all expenses relative to the balance; all with animated numbers.</li>
-   <li>Have all data saved to localstorage and displayed on page load using smooth animations.</li>
+   <li>View the optimal layout for the site depending on their device's screen size.</li>
+   <li>See hover states for all interactive elements on the page.</li>
+   <li>Filter job listings based on the categories.</li>
 </ul>
 
 <h3>Links</h3>
 <ul>
    <li>
-      <a href="https://shayanthenerd.github.io/budgetly">Project homepage</a>
+      <a href="https://shayanthenerd.github.io/job-listings">Project homepage</a>
    </li>
    <li>
-      <a href="https://github.com/ShayanTheNerd/budgetly">GitHub repository</a>
+      <a href="https://github.com/ShayanTheNerd/job-listings">GitHub repository</a>
    </li>
    <li>
-      <a href="https://github.com/ShayanTheNerd/budgetly/issues">Issues</a>
+      <a href="https://github.com/ShayanTheNerd/job-listings/issues">Issues</a>
    </li>
    <li>
-      <a href="https://github.com/ShayanTheNerd/budgetly/pulls">Pull requests</a>
+      <a href="https://github.com/ShayanTheNerd/job-listings/pulls">Pull requests</a>
    </li>
    <li>
       <a href="https://github.com/ShayanTheNerd?tab=repositories">My other projects</a>
@@ -49,16 +49,14 @@
 
 <h3>I learned:</h3>
 <ul>
-   <li>How to set up a <a href="https://vuejs.org">Vue.js 3</a> and <a href="https://tailwindcss.com">Tailwind CSS</a> project using <a href="https://vitejs.dev">Vite</a>.</li>
-   <li>How to use the basics of <a href="https://vuejs.org">Vue.js</a>, using <a href="https://pinia.vuejs.org">Pinia</a> for state management.</li>
-   <li>How to use the <a href="https://vuejs.org/guide/extras/composition-api-faq.html">Composition API in Vue.js</a> and the <a href="https://vueuse.org">VueUse</a> library.</li>
+   <li>How to filter out a list of items based on the searched keywords.</li>
 </ul>
 
 <h2>Development setup</h2>
 <p>1. First, you need to clone the project:</p>
 
 ```sh
-git clone https://github.com/ShayanTheNerd/budgetly.git
+git clone https://github.com/ShayanTheNerd/job-listings.git
 ```
 
 <p>
@@ -68,7 +66,7 @@ git clone https://github.com/ShayanTheNerd/budgetly.git
 ```sh
 pnpm i -g degit
 
-degit https://github.com/ShayanTheNerd/budgetly new-project-folder
+degit https://github.com/ShayanTheNerd/job-listings new-project-folder
 ```
 
 <p>2. Then, install required packages:</p>
@@ -112,10 +110,10 @@ pnpm run preview
 <p>Your contribution is always welcome, please follow these steps:</p>
 <ol>
    <li>
-      <a href="https://github.com/ShayanTheNerd/budgetly/fork">Fork the project</a>.
+      <a href="https://github.com/ShayanTheNerd/job-listings/fork">Fork the project</a>.
    </li>
    <li>Create your feature branch: <code>git checkout -b feature/branch-name</code>.</li>
-   <li>Make sure to follow instructions in the <a href="https://github.com/ShayanTheNerd/budgetly#style-guide">style guide</a> section.</li>
+   <li>Make sure to follow instructions in the <a href="https://github.com/ShayanTheNerd/job-listings#style-guide">style guide</a> section.</li>
    <li>Stage all changes you made: <code>git add -A</code>.</li>
    <li>Commit all staged changes with a descriptive commit message: <code>git commit -m 'feat: add foo bar baz'</code>.</li>
    <li>Push everything to your feature branch: <code>git push origin feature/branch-name</code>.</li>
@@ -124,9 +122,9 @@ pnpm run preview
 
 <h2>License</h2>
 <p>
-   This project is licensed under <a href="https://github.com/ShayanTheNerd/budgetly/blob/main/LICENSE.md">MIT license</a>. You're free to use it, but a link to this page and mentioning the author's name is mandatory. Created by <a href="https://shayan-zamani.me">Shayan Zamani</a>.
+   This project is licensed under <a href="https://github.com/ShayanTheNerd/job-listings/blob/main/LICENSE.md">MIT license</a>. You're free to use it, but a link to this page and mentioning the author's name is mandatory. Created by <a href="https://shayan-zamani.me">Shayan Zamani</a>.
 </p>
 
 <br />
 
-<a href="https://github.com/ShayanTheNerd/budgetly#readme">back to top ⬆️</a>
+<a href="https://github.com/ShayanTheNerd/job-listings#readme">back to top ⬆️</a>

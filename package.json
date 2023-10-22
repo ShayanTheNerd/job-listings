@@ -1,7 +1,7 @@
 {
 	"license": "MIT",
-	"homepage": "https://budgetly-expense-tracker.netlify.app",
-	"readme": "https://github.com/ShayanTheNerd/budgetly#readme",
+	"homepage": "https://job-listings.netlify.app",
+	"readme": "https://github.com/ShayanTheNerd/job-listings#readme",
 	"author": {
 		"name": "Shayan Zamani",
 		"url": "https://shayan-zamani.me/",
@@ -10,11 +10,11 @@
 	"repository": {
 		"type": "git",
 		"directory": "main",
-		"url": "https://github.com/ShayanTheNerd/budgetly"
+		"url": "https://github.com/ShayanTheNerd/job-listings"
 	},
 	"bugs": {
 		"email": "sh.zamani384@gmail.com",
-		"url": "https://github.com/ShayanTheNerd/budgetly/issues"
+		"url": "https://github.com/ShayanTheNerd/job-listings/issues"
 	},
 	"scripts": {
 		"dev": "vite",
@@ -23,18 +23,15 @@
 		"format": "npx prettier --write ."
 	},
 	"dependencies": {
-		"@vueuse/core": "^10.4.1",
-		"pinia": "^2.1.6",
-		"pinia-plugin-persistedstate": "^3.2.0",
-		"vue": "^3.3.4"
+		"vue": "^3.3.6"
 	},
 	"devDependencies": {
-		"@vitejs/plugin-vue": "^4.3.4",
-		"autoprefixer": "^10.4.15",
-		"postcss": "^8.4.29",
+		"@vitejs/plugin-vue": "^4.4.0",
+		"autoprefixer": "^10.4.16",
+		"postcss": "^8.4.31",
 		"prettier": "3.0.3",
-		"prettier-plugin-tailwindcss": "^0.5.4",
+		"prettier-plugin-tailwindcss": "^0.5.6",
 		"tailwindcss": "^3.3.3",
-		"vite": "^4.4.9"
+		"vite": "^4.5.0"
 	}
 }
