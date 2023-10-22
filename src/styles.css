@@ -13,3 +13,17 @@
 		-moz-appearance: textfield;
 	}
 }
+
+/* prettier-ignore */
+@font-face {
+	font-family: 'League Spartan';
+	font-weight: 400;
+	unicode-range: U+0020-030A;
+	src: local('LeagueSpartan-Regular'), local(League Spartan Regular), url('../public/assets/fonts/League-Spartan-400.woff2');
+}
+@font-face {
+	font-family: 'League Spartan';
+	font-weight: 700;
+	unicode-range: U+0020-030A;
+	src: local('LeagueSpartan-Bold'), local(League Spartan Bold), url('../public/assets/fonts/League-Spartan-700.woff2');
+}
