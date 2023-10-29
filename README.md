@@ -4,7 +4,7 @@
    Easily find the job you're looking for.
 </p>
 <figure>
-   <img src="https://github.com/ShayanTheNerd/job-listings/blob/main/og-img.webp" alt="Job Listings Preview" />
+   <img src="https://github.com/ShayanTheNerd/job-listings/blob/main/og-img.webp" alt="Job Listings preview" />
 </figure>
 
 <h2>Overview</h2>
