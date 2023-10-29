@@ -3,14 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-	/* Hide default number input arrows */
-	input::-webkit-outer-spin-button,
-	input::-webkit-inner-spin-button {
-		@apply appearance-none;
-	}
-	input[type='number'] {
-		appearance: textfield;
-		-moz-appearance: textfield;
+	* {
+		@apply font-league-spartan;
 	}
 }
 
@@ -19,11 +13,11 @@
 	font-family: 'League Spartan';
 	font-weight: 400;
 	unicode-range: U+0020-030A;
-	src: local('LeagueSpartan-Regular'), local(League Spartan Regular), url('../public/assets/fonts/League-Spartan-400.woff2');
+	src: local('LeagueSpartan-Regular'), local(League Spartan Regular), url('../fonts/league-spartan-400.woff2');
 }
 @font-face {
 	font-family: 'League Spartan';
 	font-weight: 700;
 	unicode-range: U+0020-030A;
-	src: local('LeagueSpartan-Bold'), local(League Spartan Bold), url('../public/assets/fonts/League-Spartan-700.woff2');
+	src: local('LeagueSpartan-Bold'), local(League Spartan Bold), url('../fonts/league-spartan-700.woff2');
 }

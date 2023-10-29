@@ -8,7 +8,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['League Spartan', 'Arial', 'Helvetica', ...defaultTheme.fontFamily.sans],
+				'league-spartan': ['League Spartan', 'Arial', 'Helvetica', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},
