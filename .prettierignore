@@ -1,0 +1,4 @@
+dist
+
+# Minified SVG images
+public/images/*.svg
