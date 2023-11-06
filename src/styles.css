@@ -9,6 +9,9 @@
 	button:focus-visible {
 		@apply outline-none;
 	}
+	::selection {
+		@apply bg-darkCyan text-whiteSmoke;
+	}
 
 	/* Remove the “datalist” drop-down arrow from inputs */
 	input[list]::-webkit-list-button,
