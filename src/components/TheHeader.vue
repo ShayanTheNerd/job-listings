@@ -27,15 +27,15 @@
 		<h1 class="sr-only">Job Listings</h1>
 
 		<search
-			class="mx-auto mt-auto w-88% max-w-screen-lg translate-y-1/2 rounded-md bg-white p-5 shadow-2xl shadow-darkCyan/30 lg:px-9 lg:py-4">
+			class="mx-auto mt-auto w-88% max-w-screen-lg translate-y-1/2 rounded bg-white p-5 shadow-2xl shadow-darkCyan/30 lg:px-9 lg:py-4">
 			<form
 				@submit="$event.preventDefault()"
 				@reset="tags.clear(), tagInput.focus()"
 				class="flex items-center justify-between gap-4 overflow-x-auto">
-				<fieldset>
+				<fieldset class="w-full">
 					<legend class="sr-only">Search for jobs</legend>
 
-					<output class="flex flex-wrap items-center gap-2">
+					<output class="flex flex-wrap items-center gap-2 sm:gap-3.5">
 						<label class="relative mx-0.5 my-1.5 inline-block h-9 md:order-last md:hidden">
 							<input
 								required
@@ -46,7 +46,7 @@
 								@keypress.space.enter.prevent="addNewTag()"
 								v-model.trim="newTag"
 								ref="tagInput"
-								class="peer h-inherit w-44 rounded-md px-2 pt-1 outline outline-3 outline-steel valid:outline-darkCyan focus:outline-darkCyan" />
+								class="peer h-inherit w-44 rounded px-2 pt-1 outline outline-3 outline-steel valid:outline-darkCyan focus:outline-darkCyan" />
 							<p
 								class="absolute bottom-1/2 left-2 translate-y-1/2 cursor-text bg-white px-1 !leading-3 text-steel transition-all ease-linear peer-valid:bottom-full peer-valid:text-sm peer-valid:text-darkCyan peer-focus:bottom-full peer-focus:text-sm peer-focus:text-darkCyan">
 								Filter jobs by tags
@@ -62,7 +62,7 @@
 						</label>
 
 						<menu
-							class="flex max-h-20 grow flex-col flex-wrap gap-3.5 overflow-x-auto scroll-smooth rounded-md md:max-h-none md:flex-row md:items-center">
+							class="flex max-h-20 grow flex-col flex-wrap gap-3.5 overflow-x-auto scroll-smooth rounded md:max-h-none md:flex-row md:items-center">
 							<li class="hidden md:order-last md:inline-block">
 								<label class="relative mx-0.5 my-1.5 inline-block h-9 md:order-last">
 									<input
@@ -74,7 +74,7 @@
 										@keypress.space.enter.prevent="addNewTag()"
 										v-model.trim="newTag"
 										ref="tagInput"
-										class="peer h-inherit w-44 rounded-md px-2 pt-1 outline outline-3 outline-steel valid:outline-darkCyan focus:outline-darkCyan" />
+										class="peer h-inherit w-44 rounded px-2 pt-1 outline outline-3 outline-steel valid:outline-darkCyan focus:outline-darkCyan" />
 									<p
 										class="absolute bottom-1/2 left-2 translate-y-1/2 cursor-text bg-white px-1 !leading-3 text-steel transition-all ease-linear peer-valid:bottom-full peer-valid:text-sm peer-valid:text-darkCyan peer-focus:bottom-full peer-focus:text-sm peer-focus:text-darkCyan">
 										Filter jobs by tags
@@ -93,7 +93,7 @@
 							<li
 								v-for="tag in tags"
 								:key="tag"
-								class="flex h-8 min-w-max items-center overflow-hidden rounded-md shadow-sm">
+								class="flex h-8 min-w-max items-center overflow-hidden rounded shadow-sm">
 								<span
 									class="flex h-full grow items-center justify-center bg-whiteSmoke px-2.5 pt-0.5 text-center text-sm font-bold leading-10 tracking-wide text-darkCyan">
 									{{ tag }}
