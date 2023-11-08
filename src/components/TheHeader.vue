@@ -27,7 +27,7 @@
 		<h1 class="sr-only">Job Listings</h1>
 
 		<search
-			class="mx-auto mt-auto w-[88%] max-w-screen-lg translate-y-1/2 rounded-md bg-white p-5 shadow-2xl shadow-darkCyan/30 lg:px-9 lg:py-4">
+			class="mx-auto mt-auto w-88% max-w-screen-lg translate-y-1/2 rounded-md bg-white p-5 shadow-2xl shadow-darkCyan/30 lg:px-9 lg:py-4">
 			<form
 				@submit="$event.preventDefault()"
 				@reset="tags.clear(), tagInput.focus()"
@@ -43,7 +43,7 @@
 								list="job_tags"
 								title="Separate tags with spaces"
 								maxlength="25"
-								@keypress.space.enter.prevent="addNewTag($event)"
+								@keypress.space.enter.prevent="addNewTag()"
 								v-model.trim="newTag"
 								ref="tagInput"
 								class="peer h-inherit w-44 rounded-md px-2 pt-1 outline outline-3 outline-steel valid:outline-darkCyan focus:outline-darkCyan" />
@@ -71,7 +71,7 @@
 										list="job_tags"
 										title="Separate tags with spaces"
 										maxlength="25"
-										@keypress.space.enter.prevent="addNewTag($event)"
+										@keypress.space.enter.prevent="addNewTag()"
 										v-model.trim="newTag"
 										ref="tagInput"
 										class="peer h-inherit w-44 rounded-md px-2 pt-1 outline outline-3 outline-steel valid:outline-darkCyan focus:outline-darkCyan" />

@@ -7,6 +7,9 @@ export default {
 	future: { hoverOnlyWhenSupported: true },
 	theme: {
 		extend: {
+			width: {
+				'88%': '88%',
+			},
 			outlineWidth: {
 				3: '3px',
 			},
