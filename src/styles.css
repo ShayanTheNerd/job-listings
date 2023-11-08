@@ -4,8 +4,11 @@
 
 @layer base {
 	/* Tab-Navigation focus ring */
-	button:focus-visible {
+	:where(a, button):focus-visible {
 		@apply outline-none;
+	}
+	a:focus-visible {
+		@apply outline-offset-3 rounded text-darkCyan outline-3 outline-darkCyan;
 	}
 
 	/* Remove the “datalist” drop-down arrow from inputs */
@@ -20,6 +23,12 @@
 	input[type='search']::-webkit-search-results-button,
 	input[type='search']::-webkit-search-results-decoration {
 		@apply appearance-none;
+	}
+}
+
+@layer utilities {
+	.divide-x-disc > li:not(:first-child)::before {
+		@apply mx-2.5 inline-block h-1 w-1 rounded-full bg-steel/60 align-middle content-[''] lg:mx-4;
 	}
 }
 

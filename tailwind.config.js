@@ -13,6 +13,9 @@ export default {
 			outlineWidth: {
 				3: '3px',
 			},
+			outlineOffset: {
+				3: '3px',
+			},
 			spacing: {
 				inherit: 'inherit',
 			},
