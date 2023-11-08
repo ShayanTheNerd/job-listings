@@ -1,0 +1,122 @@
+[
+	{
+		"id": 1,
+		"company": "Photosnap",
+		"logo": "photosnap.svg",
+		"new": true,
+		"featured": true,
+		"position": "Senior Frontend Developer",
+		"postedAt": "1d ago",
+		"contract": "Full Time",
+		"location": "USA Only",
+		"tags": ["Frontend", "Senior", "HTML", "CSS", "JavaScript"]
+	},
+	{
+		"id": 2,
+		"company": "Manage",
+		"logo": "manage.svg",
+		"new": true,
+		"featured": true,
+		"position": "Fullstack Developer",
+		"postedAt": "1d ago",
+		"contract": "Part Time",
+		"location": "Remote",
+		"tags": ["Fullstack", "MidLevel", "Python", "React"]
+	},
+	{
+		"id": 3,
+		"company": "Account",
+		"logo": "account.svg",
+		"new": true,
+		"featured": false,
+		"position": "Frontend Developer",
+		"postedAt": "2d ago",
+		"contract": "Part Time",
+		"location": "USA Only",
+		"tags": ["Frontend", "MidLevel", "JavaScript", "React", "Sass"]
+	},
+	{
+		"id": 4,
+		"company": "MyHome",
+		"logo": "myhome.svg",
+		"new": false,
+		"featured": false,
+		"position": "Junior Frontend Developer",
+		"postedAt": "5d ago",
+		"contract": "Contract",
+		"location": "USA Only",
+		"tags": ["Frontend", "Junior", "HTML", "CSS", "JavaScript"]
+	},
+	{
+		"id": 5,
+		"company": "Loop Studios",
+		"logo": "loop-studios.svg",
+		"new": false,
+		"featured": false,
+		"position": "Software Engineer",
+		"postedAt": "1w ago",
+		"contract": "Full Time",
+		"location": "Worldwide",
+		"tags": ["Fullstack", "MidLevel", "JavaScript", "PHP", "TailwindCSS"]
+	},
+	{
+		"id": 6,
+		"company": "FaceIt",
+		"logo": "faceit.svg",
+		"new": false,
+		"featured": false,
+		"position": "Junior Backend Developer",
+		"postedAt": "2w ago",
+		"contract": "Full Time",
+		"location": "UK Only",
+		"tags": ["Backend", "Junior", "Ruby", "RoR"]
+	},
+	{
+		"id": 7,
+		"company": "Shortly",
+		"logo": "shortly.svg",
+		"new": false,
+		"featured": false,
+		"position": "Junior Frontend Developer",
+		"postedAt": "2w ago",
+		"contract": "Full Time",
+		"location": "Worldwide",
+		"tags": ["Frontend", "Junior", "HTML", "JavaScript", "TailwindCSS"]
+	},
+	{
+		"id": 8,
+		"company": "Insure",
+		"logo": "insure.svg",
+		"new": false,
+		"featured": false,
+		"position": "Junior Frontend Developer",
+		"postedAt": "2w ago",
+		"contract": "Full Time",
+		"location": "USA Only",
+		"tags": ["Frontend", "Junior", "JavaScript", "Vue", "UnoCSS"]
+	},
+	{
+		"id": 9,
+		"company": "Eyecam Co.",
+		"logo": "eyecam-co.svg",
+		"new": false,
+		"featured": false,
+		"position": "Full Stack Engineer",
+		"postedAt": "3w ago",
+		"contract": "Full Time",
+		"location": "Worldwide",
+		"tags": ["Fullstack", "Senior", "JavaScript", "Python", "Django"]
+	},
+	{
+		"id": 10,
+		"company": "The Air Filter Company",
+		"logo": "the-air-filter-company.svg",
+		"new": false,
+		"featured": false,
+		"position": "Front-end Dev",
+		"postedAt": "1mo ago",
+		"contract": "Part Time",
+		"location": "Worldwide",
+		"tags": ["Frontend", "JavaScript", "Angular", "Sass"]
+	}
+]

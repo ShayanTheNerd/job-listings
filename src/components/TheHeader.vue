@@ -1,20 +1,30 @@
 <script setup>
-	import { onMounted, ref } from 'vue';
+	import { onMounted, ref, toRef } from 'vue';
 
-	const tags = ref(new Set(['Frontend', 'CSS', 'JavaScript']));
+	const props = defineProps({
+		tags: {
+			required: true,
+			type: Set,
+		},
+	});
+
+	const tags = toRef(props.tags);
+	const selectedTags = ref(new Set(['HTML', 'CSS', 'JavaScript']));
 	const newTag = ref('');
 	const tagInput = ref();
 
 	function deleteTag(event) {
 		const tagName = event.target.closest('li').querySelector('span').textContent;
 
-		tags.value.delete(tagName);
+		selectedTags.value.delete(tagName);
+		tags.value.add(tagName);
 	}
 
 	function addNewTag() {
-		if (!newTag.value || tags.value.has(newTag.value)) return;
+		if (!newTag.value || selectedTags.value.has(newTag.value)) return;
 
-		tags.value.add(newTag.value);
+		selectedTags.value.add(newTag.value);
+		tags.value.delete(newTag.value);
 		newTag.value = '';
 		tagInput.value.focus();
 	}
@@ -30,7 +40,7 @@
 			class="mx-auto mt-auto w-88% max-w-screen-lg translate-y-1/2 rounded bg-white p-5 shadow-2xl shadow-darkCyan/30 lg:px-9 lg:py-4">
 			<form
 				@submit="$event.preventDefault()"
-				@reset="tags.clear(), tagInput.focus()"
+				@reset="selectedTags.clear(), tagInput.focus()"
 				class="flex items-center justify-between gap-4 overflow-x-auto">
 				<fieldset class="w-full">
 					<legend class="sr-only">Search for jobs</legend>
@@ -53,11 +63,7 @@
 							</p>
 
 							<datalist id="job_tags">
-								<option value="Vue">Vue</option>
-								<option value="CSS">CSS</option>
-								<option value="HTML">HTML</option>
-								<option value="Tailwind">Tailwind</option>
-								<option value="JavaScript">JavaScript</option>
+								<option v-for="tag in [...tags].sort()" :key="tag" :value="tag"></option>
 							</datalist>
 						</label>
 
@@ -81,17 +87,13 @@
 									</p>
 
 									<datalist id="job_tags">
-										<option value="Vue">Vue</option>
-										<option value="CSS">CSS</option>
-										<option value="HTML">HTML</option>
-										<option value="Tailwind">Tailwind</option>
-										<option value="JavaScript">JavaScript</option>
+										<option v-for="tag in [...tags].sort()" :key="tag" :value="tag"></option>
 									</datalist>
 								</label>
 							</li>
 
 							<li
-								v-for="tag in tags"
+								v-for="tag in selectedTags"
 								:key="tag"
 								class="flex h-8 min-w-max items-center overflow-hidden rounded shadow-sm">
 								<span

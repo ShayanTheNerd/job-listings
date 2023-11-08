@@ -1,15 +1,19 @@
 <script setup>
-	import { ref } from 'vue';
 	import JobCard from '@/components/JobCard.vue';
 
-	const jobs = ref([{}]);
+	const props = defineProps({
+		jobs: {
+			required: true,
+			type: Array,
+		},
+	});
 </script>
 
 <template>
 	<main class="bg-lilacWhite pb-6 pt-44 sm:pt-32 md:pt-28 lg:pt-24">
 		<nav v-if="jobs.length" class="mx-auto w-88% max-w-screen-lg">
 			<ul class="space-y-12 lg:space-y-6">
-				<JobCard v-for="job in jobs" :key="job" />
+				<JobCard v-for="job in jobs" :key="job.id" :job="job" />
 			</ul>
 		</nav>
 
