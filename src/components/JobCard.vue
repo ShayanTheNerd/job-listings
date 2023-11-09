@@ -47,7 +47,7 @@
 
 		<hr class="my-4 border border-charcoal/20 lg:hidden" />
 
-		<menu class="flex w-1/2 flex-wrap justify-end gap-4 text-sm">
+		<menu class="flex flex-wrap gap-4 text-sm lg:w-1/2 lg:justify-end">
 			<li v-for="tag in tags" :key="tag">
 				<button
 					type="button"
