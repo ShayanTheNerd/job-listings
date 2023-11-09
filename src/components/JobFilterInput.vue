@@ -2,8 +2,8 @@
 	import { ref } from 'vue';
 	import { useJobsStore } from '@/jobsStore.js';
 
-	const tagInput = ref();
 	const jobsStore = useJobsStore();
+	const tagInput = ref();
 
 	function addNewTag(newTag) {
 		jobsStore.addTag(newTag);

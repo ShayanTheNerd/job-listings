@@ -2,14 +2,12 @@
 	import { useJobsStore } from '@/jobsStore.js';
 
 	const jobsStore = useJobsStore();
-
 	const props = defineProps({
 		job: {
 			required: true,
 			type: Object,
 		},
 	});
-
 	const { company, logo, new: isNew, featured: isFeatured, position, postedAt, contract, location, tags } = props.job;
 </script>
 

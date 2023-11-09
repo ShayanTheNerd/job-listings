@@ -2,7 +2,6 @@
 	import { useJobsStore } from '@/jobsStore.js';
 
 	const jobsStore = useJobsStore();
-
 	const props = defineProps({
 		tag: {
 			required: true,

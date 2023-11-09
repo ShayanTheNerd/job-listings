@@ -5,6 +5,5 @@
 
 <template>
 	<TheHeader />
-
 	<TheMain />
 </template>
