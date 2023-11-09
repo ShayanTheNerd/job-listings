@@ -1,4 +1,8 @@
 <script setup>
+	import { useJobsStore } from '@/jobsStore.js';
+
+	const jobsStore = useJobsStore();
+
 	const props = defineProps({
 		job: {
 			required: true,
@@ -46,10 +50,12 @@
 		<hr class="my-4 border border-charcoal/20 lg:hidden" />
 
 		<menu class="flex w-1/2 flex-wrap justify-end gap-4 text-sm">
-			<li class="" v-for="tag in tags" :key="tag">
+			<li v-for="tag in tags" :key="tag">
 				<button
 					type="button"
-					class="rounded bg-whiteSmoke px-2 pb-1 pt-1.5 font-bold tracking-wide text-darkCyan shadow-sm transition-all focus-within:bg-darkCyan focus-within:text-whiteSmoke hover:bg-darkCyan hover:text-whiteSmoke">
+					@click="jobsStore.addTag(tag)"
+					:class="jobsStore.activeTags.has(tag) ? 'bg-darkCyan text-whiteSmoke' : 'bg-whiteSmoke text-darkCyan'"
+					class="rounded px-2 pb-1 pt-1.5 font-bold tracking-wide shadow-sm transition-all focus-within:bg-darkCyan focus-within:text-whiteSmoke hover:bg-darkCyan hover:text-whiteSmoke">
 					{{ tag }}
 				</button>
 			</li>

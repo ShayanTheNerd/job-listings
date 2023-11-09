@@ -1,8 +1,6 @@
 import '@/styles.css';
 import App from '@/App.vue';
 import { createApp } from 'vue';
-import useFetchJobs from '@/composables/useFetchJobs.mjs';
+import { createPinia } from 'pinia';
 
-const jobs = await useFetchJobs();
-
-createApp(App).provide('jobs', jobs).mount('#app');
+createApp(App).use(createPinia()).mount('#app');

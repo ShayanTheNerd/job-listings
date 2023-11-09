@@ -1,0 +1,39 @@
+<script setup>
+	import { ref } from 'vue';
+	import { useJobsStore } from '@/jobsStore.js';
+
+	const tagInput = ref();
+	const jobsStore = useJobsStore();
+
+	function addNewTag(newTag) {
+		jobsStore.addTag(newTag);
+		tagInput.value.value = '';
+		tagInput.value.focus();
+	}
+
+	defineExpose({ focus: () => tagInput.value.focus() });
+</script>
+
+<template>
+	<label class="relative mx-0.5 my-1.5 inline-block h-9 md:order-last">
+		<input
+			required
+			ref="tagInput"
+			v-bind="$attrs"
+			@keypress.space.enter.prevent="addNewTag($event.target.value)"
+			type="search"
+			list="job_tags"
+			inputmode="search"
+			maxlength="20"
+			title="Press space or enter to add a new tag"
+			class="peer h-inherit w-44 rounded px-2 pt-1 outline outline-3 outline-steel valid:outline-darkCyan focus:outline-darkCyan" />
+		<p
+			class="absolute bottom-1/2 left-2 translate-y-1/2 cursor-text bg-white px-1 !leading-3 text-steel transition-all ease-linear peer-valid:bottom-full peer-valid:text-sm peer-valid:text-darkCyan peer-focus:bottom-full peer-focus:text-sm peer-focus:text-darkCyan">
+			Filter jobs by tags
+		</p>
+
+		<datalist id="job_tags">
+			<option v-for="tag in jobsStore.tags" :key="tag" :value="tag"></option>
+		</datalist>
+	</label>
+</template>

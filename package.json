@@ -23,6 +23,7 @@
 		"format": "npx prettier --write ."
 	},
 	"dependencies": {
+		"pinia": "^2.1.7",
 		"vue": "^3.3.7"
 	},
 	"devDependencies": {

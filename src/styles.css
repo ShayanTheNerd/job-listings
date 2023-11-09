@@ -8,7 +8,7 @@
 		@apply outline-none;
 	}
 	a:focus-visible {
-		@apply outline-offset-3 rounded text-darkCyan outline-3 outline-darkCyan;
+		@apply rounded text-darkCyan outline-3 outline-offset-3 outline-darkCyan;
 	}
 
 	/* Remove the “datalist” drop-down arrow from inputs */
