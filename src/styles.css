@@ -30,6 +30,10 @@
 	.divide-x-disc > li:not(:first-child)::before {
 		@apply mx-2.5 inline-block h-1 w-1 rounded-full bg-steel/60 align-middle content-[''] lg:mx-4;
 	}
+
+	.scrollbar-stable-both {
+		scrollbar-gutter: stable both-edges;
+	}
 }
 
 /* prettier-ignore */
