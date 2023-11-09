@@ -3,7 +3,9 @@ export default async function useFetchJobs(requestURL) {
 
 	if (jobs) return jobs;
 
-	jobs = await fetch(requestURL).then(response => response.json());
+	const response = await fetch(requestURL);
+	jobs = await response.json();
 	localStorage.setItem('jobs', JSON.stringify(jobs));
+
 	return jobs;
 }
