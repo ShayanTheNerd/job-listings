@@ -25,17 +25,20 @@
 				<fieldset class="w-full">
 					<legend class="sr-only">Search for jobs</legend>
 
-					<output class="flex flex-wrap items-center gap-2 sm:gap-3.5">
+					<output class="relative flex flex-wrap items-center gap-2 sm:gap-3.5">
 						<JobFilterInput ref="newTagInput" class="md:hidden" />
 
-						<menu
+						<TransitionGroup
+							appear
+							tag="menu"
+							name="fade"
 							class="flex max-h-20 grow flex-col flex-wrap gap-3.5 overflow-x-auto scroll-smooth rounded md:max-h-none md:flex-row md:items-center">
-							<li class="hidden md:order-last md:inline-block">
+							<li key class="hidden md:order-last md:inline-block">
 								<JobFilterInput ref="newTagInput" />
 							</li>
 
 							<JobFilterTag v-for="tag in jobsStore.activeTags" :key="tag" :tag="tag" />
-						</menu>
+						</TransitionGroup>
 					</output>
 				</fieldset>
 

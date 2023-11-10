@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { defineStore, acceptHMRUpdate } from 'pinia';
 import useFetchJobs from '@/composables/useFetchJobs.mjs';
 
@@ -32,6 +32,7 @@ export const useJobsStore = defineStore('jobsStore', () => {
 
 		activeTags.value.add(newTag);
 		tags.value.delete(newTag);
+		document.querySelector('main').scrollTo({ top: 0, behavior: 'smooth' });
 	}
 	function deleteTag(tag) {
 		activeTags.value.delete(tag);
@@ -40,6 +41,9 @@ export const useJobsStore = defineStore('jobsStore', () => {
 	function deleteAllTags() {
 		activeTags.value.clear();
 	}
+
+	/* Watchers */
+	watch(activeTags, () => document.querySelector('main').scrollTo({ top: 0, behavior: 'smooth' }), { deep: true });
 
 	return {
 		jobs,

@@ -14,7 +14,7 @@
 <template>
 	<li
 		:class="isFeatured ? 'border-darkCyan' : 'border-white'"
-		class="rounded border-l-4 bg-white px-5 pb-6 pt-0 shadow-xl shadow-darkCyan/10 lg:flex lg:items-center lg:justify-between lg:px-9 lg:py-7">
+		class="w-full rounded border-l-4 bg-white px-5 pb-6 pt-0 shadow-xl shadow-darkCyan/10 lg:flex lg:items-center lg:justify-between lg:px-9 lg:py-7">
 		<div class="lg:flex lg:items-center lg:gap-5">
 			<figure
 				class="-mb-6 inline-block -translate-y-1/2 overflow-hidden rounded-full shadow-sm lg:mb-0 lg:translate-y-0">
