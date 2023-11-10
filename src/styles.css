@@ -4,11 +4,11 @@
 
 @layer base {
 	/* Tab-Navigation focus ring */
-	:where(a, button):focus-visible {
+	button:focus-visible {
 		@apply outline-none;
 	}
 	a:focus-visible {
-		@apply rounded text-darkCyan outline-3 outline-offset-3 outline-darkCyan;
+		@apply rounded text-darkCyan outline outline-3 outline-offset-3 outline-darkCyan;
 	}
 
 	/* Remove the “datalist” drop-down arrow from inputs */

@@ -9,6 +9,7 @@
 
 <template>
 	<main
+		tabindex="-1"
 		class="lg:scrollbar-stable-both scroll-smooth pb-6 pt-44 sm:pt-32 md:pt-28 lg:mx-1.5 lg:h-px lg:overflow-y-auto lg:pt-24">
 		<nav v-if="filteredJobs" class="mx-auto w-88% max-w-screen-lg">
 			<ul class="space-y-12 lg:space-y-6">
