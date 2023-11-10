@@ -25,6 +25,7 @@ export default {
 				darkCyan: '#5ba4a4',
 				lilacWhite: '#effafa',
 				whiteSmoke: '#eef6f6',
+				fountainBlue: '#63baba',
 			},
 			fontFamily: {
 				'league-spartan': ['League Spartan', 'Arial', 'Helvetica', ...defaultTheme.fontFamily.sans],
