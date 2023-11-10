@@ -54,9 +54,8 @@
 		background-size: 300%;
 		background-position: 80% 25%;
 		background-image: url('/images/bg-header-mobile.svg');
-	}
-	@media (min-width: theme('screens.lg')) {
-		header {
+
+		@media (min-width: theme('screens.lg')) {
 			background-image: url('/images/bg-header-desktop.svg');
 		}
 	}

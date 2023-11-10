@@ -25,31 +25,36 @@
 		@apply appearance-none;
 	}
 
-	/* Custom scrollbar */
+	/* Custom scrollbar on the “main” element */
 	@media (min-width: theme('screens.lg')) {
-		main::-webkit-scrollbar {
-			@apply w-2;
+		main {
+			&::-webkit-scrollbar {
+				@apply w-2;
+			}
+			&::-webkit-scrollbar-thumb {
+				@apply rounded-full bg-fountainBlue hover:bg-darkCyan/80 active:bg-darkCyan;
+			}
+			&::-webkit-scrollbar-track {
+				@apply rounded-full bg-steel/20;
+			}
+			&::-webkit-scrollbar-button {
+				@apply bg-cover bg-no-repeat;
+				background-size: 13.5px;
+
+				&:vertical:decrement {
+					background-position: -3.1px 1px;
+					background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM3YjhlOGUiIGQ9Ik02IDE2YTEgMSAwIDAgMS0uOC0xLjZsNi04YTEgMSAwIDAgMSAxLjYgMGw2IDhBMSAxIDAgMCAxIDE4IDE2SDZaIi8+PC9zdmc+');
+				}
+
+				&:vertical:increment {
+					background-position: -2.5px 0px;
+					background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM3YjhlOGUiIGQ9Ik02IDhhMSAxIDAgMCAwLS44IDEuNmw2IDhhMSAxIDAgMCAwIDEuNiAwbDYtOEExIDEgMCAwIDAgMTggOEg2WiIvPjwvc3ZnPg==');
+				}
+			}
 		}
-		main::-webkit-scrollbar-thumb {
-			@apply rounded-full bg-fountainBlue hover:bg-darkCyan/80 active:bg-darkCyan;
-		}
-		main::-webkit-scrollbar-track {
-			@apply rounded-full bg-steel/20;
-		}
-		main::-webkit-scrollbar-button {
-			@apply bg-cover bg-no-repeat;
-			background-size: 13.5px;
-		}
-		main::-webkit-scrollbar-button:vertical:decrement {
-			background-position: -3.1px 1px;
-			background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM3YjhlOGUiIGQ9Ik02IDE2YTEgMSAwIDAgMS0uOC0xLjZsNi04YTEgMSAwIDAgMSAxLjYgMGw2IDhBMSAxIDAgMCAxIDE4IDE2SDZaIi8+PC9zdmc+');
-		}
-		main::-webkit-scrollbar-button:vertical:increment {
-			background-position: -2.5px 0px;
-			background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM3YjhlOGUiIGQ9Ik02IDhhMSAxIDAgMCAwLS44IDEuNmw2IDhhMSAxIDAgMCAwIDEuNiAwbDYtOEExIDEgMCAwIDAgMTggOEg2WiIvPjwvc3ZnPg==');
-		}
+
+		/* Firefox-Specific */
 		@-moz-document url-prefix() {
-			/* Firefox-Specific */
 			main {
 				@apply !mx-0;
 				scrollbar-width: thin;
