@@ -13,6 +13,7 @@
 
 <template>
 	<li
+		v-once
 		:class="isFeatured ? 'border-darkCyan' : 'border-white'"
 		class="w-full rounded border-l-4 bg-white px-5 pb-6 pt-0 shadow-xl shadow-darkCyan/10 lg:flex lg:items-center lg:justify-between lg:px-9 lg:py-7">
 		<div class="lg:flex lg:items-center lg:gap-5">

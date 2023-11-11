@@ -12,7 +12,6 @@ export const useJobsStore = defineStore('jobsStore', () => {
 	const tags = computed(() => {
 		const allTags = jobs.reduce((previousTags, currentJob) => [...previousTags, ...currentJob.tags], []);
 		const uniqueTags = new Set(allTags);
-
 		return uniqueTags;
 	});
 	const filteredJobs = computed(() => {
@@ -43,6 +42,7 @@ export const useJobsStore = defineStore('jobsStore', () => {
 	/*** Watchers ***/
 	watch(activeTags, () => document.querySelector('main')?.scrollTo({ top: 0, behavior: 'smooth' }), { deep: true });
 
+	/*** Store API ***/
 	return {
 		jobs,
 		activeTags,

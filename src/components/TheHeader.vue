@@ -7,16 +7,16 @@
 	const jobsStore = useJobsStore();
 	const newTagInput = ref();
 
+	onMounted(() => newTagInput.value.focus());
+
 	function resetSearchForm() {
 		jobsStore.deleteAllTags();
 		newTagInput.value.focus();
 	}
-
-	onMounted(() => newTagInput.value.focus());
 </script>
 
 <template>
-	<header class="relative z-20 flex h-36 bg-darkCyan lg:!bg-cover lg:!bg-center">
+	<header v-once class="relative z-20 flex h-36 bg-darkCyan lg:!bg-cover lg:!bg-center">
 		<h1 class="sr-only">Job Listings</h1>
 
 		<search

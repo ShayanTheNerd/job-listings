@@ -31,11 +31,9 @@
 		min-height: calc(100vh - theme('spacing.36'));
 	}
 
-	@media (min-width: theme('screens.lg')) {
-		@supports (scrollbar-gutter: stable both-edges) {
-			nav {
-				width: 90.4% !important;
-			}
+	@supports (scrollbar-gutter: stable both-edges) {
+		nav {
+			@apply lg:!w-[90.4%];
 		}
 	}
 </style>
