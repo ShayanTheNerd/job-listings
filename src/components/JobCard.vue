@@ -51,9 +51,9 @@
 			<li v-for="tag in tags" :key="tag">
 				<button
 					type="button"
-					@click="jobsStore.addTag(tag)"
+					@click="jobsStore.toggleTag(tag)"
 					:class="jobsStore.activeTags.has(tag) ? 'bg-darkCyan text-whiteSmoke' : 'bg-whiteSmoke text-darkCyan'"
-					class="rounded px-2 pb-1 pt-1.5 font-bold tracking-wide shadow-sm transition-all focus-within:bg-darkCyan focus-within:text-whiteSmoke hover:bg-darkCyan hover:text-whiteSmoke">
+					class="rounded px-2 pb-1 pt-1.5 font-bold tracking-wide shadow-sm transition-all hover:bg-darkCyan hover:text-whiteSmoke focus-visible:bg-darkCyan focus-visible:text-whiteSmoke">
 					{{ tag }}
 				</button>
 			</li>

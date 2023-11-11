@@ -32,11 +32,13 @@ export const useJobsStore = defineStore('jobsStore', () => {
 
 		activeTags.value.add(newTag);
 		tags.value.delete(newTag);
-		document.querySelector('main').scrollTo({ top: 0, behavior: 'smooth' });
 	}
 	function deleteTag(tag) {
 		activeTags.value.delete(tag);
 		tags.value.add(tag);
+	}
+	function toggleTag(tag) {
+		activeTags.value.has(tag) ? deleteTag(tag) : addTag(tag);
 	}
 	function deleteAllTags() {
 		activeTags.value.clear();
@@ -51,6 +53,7 @@ export const useJobsStore = defineStore('jobsStore', () => {
 		tags,
 		filteredJobs,
 		addTag,
+		toggleTag,
 		deleteTag,
 		deleteAllTags,
 	};
