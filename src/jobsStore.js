@@ -20,7 +20,9 @@ export const useJobsStore = defineStore('jobsStore', () => {
 	const filteredJobs = computed(() => {
 		let relevantJobs = jobs.value;
 
-		if (activeTags.value.size) relevantJobs = jobs.value.filter(job => job.tags.some(tag => activeTags.value.has(tag)));
+		if (activeTags.value.size) {
+			relevantJobs = jobs.value.filter(job => [...activeTags.value].every(activeTag => job.tags.includes(activeTag)));
+		}
 		if (!relevantJobs.length) relevantJobs = null;
 
 		return relevantJobs;
