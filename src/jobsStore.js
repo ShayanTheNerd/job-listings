@@ -1,34 +1,29 @@
 import { ref, computed, watch } from 'vue';
 import { defineStore, acceptHMRUpdate } from 'pinia';
-import useFetchJobs from '@/composables/useFetchJobs.mjs';
+import useGetJobs from '@/composables/useGetJobs.mjs';
 
-const fetchedJobs = Object.freeze(await useFetchJobs('/jobs.json'));
+const jobs = Object.freeze(await useGetJobs());
 
 export const useJobsStore = defineStore('jobsStore', () => {
-	/* State */
-	const jobs = ref(fetchedJobs);
+	/*** State ***/
 	const activeTags = ref(new Set());
 
-	/* Getters */
+	/*** Getters ***/
 	const tags = computed(() => {
-		const allTags = jobs.value.reduce((previousTags, currentJob) => [...previousTags, ...currentJob.tags], []);
+		const allTags = jobs.reduce((previousTags, currentJob) => [...previousTags, ...currentJob.tags], []);
 		const allTagsSorted = allTags.sort();
 		const uniqueTags = new Set(allTagsSorted);
 
 		return uniqueTags;
 	});
 	const filteredJobs = computed(() => {
-		let relevantJobs = jobs.value;
+		if (!activeTags.value.size) return jobs;
 
-		if (activeTags.value.size) {
-			relevantJobs = jobs.value.filter(job => [...activeTags.value].every(activeTag => job.tags.includes(activeTag)));
-		}
-		if (!relevantJobs.length) relevantJobs = null;
-
-		return relevantJobs;
+		const matchingJobs = jobs.filter(job => [...activeTags.value].every(activeTag => job.tags.includes(activeTag)));
+		return matchingJobs;
 	});
 
-	/* Actions */
+	/*** Actions ***/
 	function addTag(newTag) {
 		if (!newTag || activeTags.value.has(newTag)) return;
 
@@ -46,8 +41,8 @@ export const useJobsStore = defineStore('jobsStore', () => {
 		activeTags.value.clear();
 	}
 
-	/* Watchers */
-	watch(activeTags, () => document.querySelector('main').scrollTo({ top: 0, behavior: 'smooth' }), { deep: true });
+	/*** Watchers ***/
+	watch(activeTags, () => document.querySelector('main')?.scrollTo({ top: 0, behavior: 'smooth' }), { deep: true });
 
 	return {
 		jobs,

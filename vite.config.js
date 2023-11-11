@@ -10,7 +10,7 @@ export default defineConfig({
 		vue({
 			template: {
 				compilerOptions: {
-					/* Bypass the console warning regarding the “search” native HTML element. */
+					/* Bypass the dev-only console warning for the “search” native HTML element. */
 					isNativeTag: tagName => standardHTMLTags.includes(tagName),
 				},
 			},
@@ -36,7 +36,7 @@ export default defineConfig({
 	},
 	esbuild: {
 		supported: {
-			'top-level-await': true, // Target the build for browsers that can handle top-level “await” in modules
+			'top-level-await': true, // Target the build for browsers that support top-level “await” in modules
 		},
 	},
 });
