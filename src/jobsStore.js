@@ -11,8 +11,7 @@ export const useJobsStore = defineStore('jobsStore', () => {
 	/*** Getters ***/
 	const tags = computed(() => {
 		const allTags = jobs.reduce((previousTags, currentJob) => [...previousTags, ...currentJob.tags], []);
-		const allTagsSorted = allTags.sort();
-		const uniqueTags = new Set(allTagsSorted);
+		const uniqueTags = new Set(allTags);
 
 		return uniqueTags;
 	});

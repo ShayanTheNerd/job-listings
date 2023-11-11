@@ -1,8 +1,9 @@
 <script setup>
-	import { ref } from 'vue';
+	import { computed, ref } from 'vue';
 	import { useJobsStore } from '@/jobsStore.js';
 
 	const jobsStore = useJobsStore();
+	const sortedTags = computed(() => [...jobsStore.tags].sort());
 	const tagInput = ref();
 
 	function addNewTag(newTag) {
@@ -33,7 +34,9 @@
 		</p>
 
 		<datalist id="job_tags">
-			<option v-for="tag in jobsStore.tags" :key="tag" :value="tag"></option>
+			<template v-for="tag in sortedTags">
+				<option v-if="!jobsStore.activeTags.has(tag)" :value="tag"></option>
+			</template>
 		</datalist>
 	</label>
 </template>
