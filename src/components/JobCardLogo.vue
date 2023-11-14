@@ -13,6 +13,6 @@
 
 <template>
 	<figure class="-mb-6 inline-block -translate-y-1/2 overflow-hidden rounded-full shadow-sm lg:mb-0 lg:translate-y-0">
-		<img :src="`/images/logos/${logo}`" :alt="`${company} logo`" width="60" height="60" class="w-14 lg:w-20" />
+		<img :src="`/images/logos/${logo}`" :alt="`${company} logo`" width="60" height="60" class="w-18 lg:w-22" />
 	</figure>
 </template>

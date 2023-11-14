@@ -13,7 +13,7 @@
 		tabindex="-1"
 		class="lg:scrollbar-stable-both overflow-x-hidden scroll-smooth pb-6 pt-44 sm:pt-32 md:pt-28 lg:mx-1.5 lg:h-px lg:overflow-y-auto lg:pt-24">
 		<nav v-if="filteredJobs.length" class="relative mx-auto w-88% max-w-screen-lg">
-			<ul v-animate class="flex flex-col gap-12 lg:gap-6">
+			<ul v-animate class="flex flex-col gap-16 lg:gap-6">
 				<JobCard v-for="job in filteredJobs" :key="job.id" :job="job" />
 			</ul>
 		</nav>

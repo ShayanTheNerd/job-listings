@@ -7,9 +7,6 @@ export default {
 	future: { hoverOnlyWhenSupported: true },
 	theme: {
 		extend: {
-			width: {
-				'88%': '88%',
-			},
 			outlineWidth: {
 				3: '3px',
 			},
@@ -18,6 +15,11 @@ export default {
 			},
 			spacing: {
 				inherit: 'inherit',
+			},
+			width: {
+				'88%': '88%',
+				18: '4.5rem' /* 72px */,
+				22: '5.5rem' /* 88px */,
 			},
 			colors: {
 				steel: '#7b8e8e',

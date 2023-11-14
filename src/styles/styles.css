@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+	html {
+		-webkit-tap-highlight-color: transparent;
+	}
+
 	/* Tab-Navigation focus ring */
 	button:focus-visible {
 		@apply outline-none;
