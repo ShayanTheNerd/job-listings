@@ -1,4 +1,4 @@
-import { ref, computed, watch } from 'vue';
+import { ref, computed } from 'vue';
 import { defineStore, acceptHMRUpdate } from 'pinia';
 import useGetJobs from '@/composables/useGetJobs.mjs';
 
@@ -39,9 +39,6 @@ export const useJobsStore = defineStore('jobsStore', () => {
 	function deleteAllTags() {
 		activeTags.value.clear();
 	}
-
-	/*** Watchers ***/
-	watch(activeTags, () => document.querySelector('main')?.scrollTo({ top: 0, behavior: 'smooth' }), { deep: true });
 
 	/*** Store API ***/
 	return {
