@@ -22,7 +22,7 @@
 		<search
 			class="mx-auto mt-auto w-88% max-w-screen-lg translate-y-1/2 rounded bg-white p-5 shadow-2xl shadow-darkCyan/30 lg:px-9 lg:py-4">
 			<form
-				@reset="resetSearchForm()"
+				@reset.prevent="resetSearchForm()"
 				class="flex items-center justify-between gap-4 overflow-x-auto overflow-y-hidden">
 				<fieldset class="w-full">
 					<legend class="sr-only">Search for jobs</legend>
