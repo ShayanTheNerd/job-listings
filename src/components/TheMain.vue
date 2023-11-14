@@ -1,6 +1,6 @@
 <script setup>
 	import { storeToRefs } from 'pinia';
-	import { useJobsStore } from '@/jobsStore.js';
+	import { useJobsStore } from '@/stores/jobsStore.js';
 	import JobCard from '@/components/JobCard.vue';
 
 	const jobsStore = useJobsStore();

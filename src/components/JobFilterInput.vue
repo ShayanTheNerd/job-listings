@@ -1,6 +1,6 @@
 <script setup>
 	import { computed, ref } from 'vue';
-	import { useJobsStore } from '@/jobsStore.js';
+	import { useJobsStore } from '@/stores/jobsStore.js';
 
 	const jobsStore = useJobsStore();
 	const sortedTags = computed(() => [...jobsStore.tags].sort());

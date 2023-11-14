@@ -1,6 +1,6 @@
 <script setup>
 	import { onMounted, ref } from 'vue';
-	import { useJobsStore } from '@/jobsStore.js';
+	import { useJobsStore } from '@/stores/jobsStore.js';
 	import JobFilterTag from '@/components/JobFilterTag.vue';
 	import JobFilterInput from '@/components/JobFilterInput.vue';
 

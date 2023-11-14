@@ -1,5 +1,5 @@
 <script setup>
-	import { useJobsStore } from '@/jobsStore.js';
+	import { useJobsStore } from '@/stores/jobsStore.js';
 
 	const jobsStore = useJobsStore();
 	const props = defineProps({
