@@ -18,7 +18,7 @@
 	/* Remove the “datalist” drop-down arrow from inputs */
 	input[list]::-webkit-list-button,
 	input[list]::-webkit-calendar-picker-indicator {
-		@apply !hidden;
+		@apply !hidden opacity-0;
 	}
 
 	/* Remove the “x” icon from search inputs */
