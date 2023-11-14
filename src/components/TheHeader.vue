@@ -1,13 +1,18 @@
 <script setup>
-	import { onMounted, ref } from 'vue';
+	import { onMounted, ref, watch } from 'vue';
+	import { useElementSize } from '@vueuse/core';
 	import { useJobsStore } from '@/stores/jobsStore.js';
 	import JobFilterTag from '@/components/JobFilterTag.vue';
 	import JobFilterInput from '@/components/JobFilterInput.vue';
 
 	const jobsStore = useJobsStore();
 	const newTagInput = ref();
+	const tagsList = ref();
+	const { height: tagsListHeight } = useElementSize(tagsList);
+	const emit = defineEmits(['searchBoxHeightChange']);
 
 	onMounted(() => newTagInput.value.focus());
+	watch(tagsListHeight, newHight => emit('searchBoxHeightChange', newHight));
 
 	function resetSearchForm() {
 		jobsStore.deleteAllTags();
@@ -32,6 +37,7 @@
 
 						<menu
 							v-animate
+							ref="tagsList"
 							class="flex max-h-20 grow flex-col flex-wrap gap-3.5 overflow-x-auto overflow-y-hidden scroll-smooth rounded md:max-h-none md:flex-row md:items-center">
 							<li class="hidden md:order-last md:inline-block">
 								<JobFilterInput ref="newTagInput" />
@@ -58,7 +64,7 @@
 		background-position: 80% 25%;
 		background-image: url('/images/bg-header-mobile.svg');
 
-		@media (min-width: theme('screens.lg')) {
+		@screen lg {
 			background-image: url('/images/bg-header-desktop.svg');
 		}
 	}
