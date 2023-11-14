@@ -16,7 +16,7 @@
 </script>
 
 <template>
-	<header v-once class="relative z-20 flex h-36 bg-darkCyan lg:!bg-cover lg:!bg-center">
+	<header class="relative z-20 flex h-36 bg-darkCyan lg:!bg-cover lg:!bg-center">
 		<h1 class="sr-only">Job Listings</h1>
 
 		<search
