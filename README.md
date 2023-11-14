@@ -13,13 +13,14 @@
 <ul>
    <li>View the optimal layout for the site depending on their device's screen size.</li>
    <li>See hover states for all interactive elements on the page.</li>
-   <li>Filter job listings based on the categories.</li>
+   <li>See animations when making a change on the page.</li>
+   <li>Filter job listings based on the tags.</li>
 </ul>
 
 <h3>Links</h3>
 <ul>
    <li>
-      <a href="https://shayanthenerd.github.io/job-listings">Project homepage</a>
+      <a href="https://animated-job-listings.netlify.app">Project homepage</a>
    </li>
    <li>
       <a href="https://github.com/ShayanTheNerd/job-listings">GitHub repository</a>
@@ -47,9 +48,14 @@
    </li>
 </ul>
 
-<h3>I learned:</h3>
+<h3>I learned how to:</h3>
 <ul>
-   <li>How to filter out a list of items based on the searched keywords.</li>
+   <li>How to fully customize a scrollbar with scroll up/down arrows.</li>
+   <li>How to filter a list of items based on the searched keywords.</li>
+   <li>How to make a dynamic layout when the height of non-sibling, non-statically-positioned elements changes, using the <a href="https://vueuse.org/core/useElementSize"><code>useElementSize</code> utility function</a> from <a href="https://auto-animate.formkit.com">VueUse</a> library.</li>
+   <li>How to leverage <a href="https://auto-animate.formkit.com">AutoAnimate</a> for implementing animations.</li>
+   <li>How to use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"><code>datalist</code></a> element to create a select list.</li>
+   <li>How to work with the <a href="https://pinia.vuejs.org/core-concepts/#Setup-Stores">Setup Syntax</a> in a <a href="https://pinia.vuejs.org">Pinia</a> store.</li>
 </ul>
 
 <h2>Development setup</h2>
