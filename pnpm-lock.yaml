@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@formkit/auto-animate':
+    specifier: ^0.8.1
+    version: 0.8.1
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(vue@3.3.7)
@@ -301,6 +304,11 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@formkit/auto-animate@0.8.1:
+    resolution:
+      { integrity: sha512-0/Z2cuNXWVVIG/l0SpcHAWFhGdvLJ8DRvEfRWvmojtmRWfEy+LWNwgDazbZqY0qQYtkHcoEK3jBLkhiZaB/4Ig== }
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution:
