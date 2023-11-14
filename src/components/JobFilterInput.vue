@@ -7,7 +7,10 @@
 	const tagInput = ref();
 
 	function addNewTag(newTag) {
-		jobsStore.addTag(newTag);
+		const newTagIsValid = jobsStore.addTag(newTag);
+
+		if (!newTagIsValid) return;
+
 		tagInput.value.value = '';
 		tagInput.value.focus();
 	}

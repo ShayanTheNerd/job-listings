@@ -23,10 +23,11 @@ export const useJobsStore = defineStore('jobsStore', () => {
 
 	/*** Actions ***/
 	function addTag(newTag) {
-		if (!newTag || activeTags.value.has(newTag)) return;
+		if (!newTag || activeTags.value.has(newTag)) return false;
 
 		activeTags.value.add(newTag);
 		tags.value.delete(newTag);
+		return true;
 	}
 	function deleteTag(tag) {
 		activeTags.value.delete(tag);
