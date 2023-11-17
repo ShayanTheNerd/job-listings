@@ -42,7 +42,6 @@ export const useJobsStore = defineStore('jobsStore', () => {
 
 	/*** Store API ***/
 	return {
-		jobs,
 		activeTags,
 		tags,
 		filteredJobs,
