@@ -10,7 +10,7 @@ export const useJobsStore = defineStore('jobsStore', () => {
 
 	/*** Getters ***/
 	const tags = computed(() => {
-		const allTags = jobs.reduce((previousTags, currentJob) => [...previousTags, ...currentJob.tags], []);
+		const allTags = jobs.flatMap(job => job.tags);
 		const uniqueTags = new Set(allTags);
 		return uniqueTags;
 	});
