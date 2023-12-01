@@ -84,12 +84,14 @@
 @font-face {
 	font-family: 'League Spartan';
 	font-weight: 400;
+   font-display: swap;
 	unicode-range: U+0020-030A;
 	src: local('LeagueSpartan-Regular'), local(League Spartan Regular), url('../fonts/league-spartan-400.woff2');
 }
 @font-face {
 	font-family: 'League Spartan';
 	font-weight: 700;
+	font-display: swap;
 	unicode-range: U+0020-030A;
 	src: local('LeagueSpartan-Bold'), local(League Spartan Bold), url('../fonts/league-spartan-700.woff2');
 }
