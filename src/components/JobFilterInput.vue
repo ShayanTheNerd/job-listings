@@ -29,10 +29,10 @@
 			list="job_tags"
 			maxlength="15"
 			ref="tagInput"
-			placeholder="Filter jobs by tags"
-			title="Press space or enter to add a new tag"
+			title="Filter jobs by tags"
+			placeholder="Divide tags with 'space'"
 			@keypress.space.enter.prevent="addNewTag($event.target.value)"
-			class="h-inherit w-44 rounded bg-white px-2 caret-darkCyan outline outline-3 outline-steel placeholder:-translate-y-0.5 focus:outline-darkCyan lg:pt-[3px] lg:placeholder:translate-y-0" />
+			class="h-inherit w-44 rounded bg-white pe-1 ps-2 caret-darkCyan outline outline-3 outline-steel placeholder:-translate-y-0.5 focus:outline-darkCyan lg:px-2 lg:pt-[3px] lg:placeholder:translate-y-0" />
 
 		<datalist id="job_tags">
 			<template v-for="tag in sortedTags" :key="tag">
