@@ -8,11 +8,11 @@
 	}
 
 	/* Tab-Navigation focus ring */
-	button:focus-visible {
+	:where(input, button, a):focus-visible {
 		@apply outline-none;
 	}
 	a:focus-visible {
-		@apply rounded text-darkCyan outline outline-3 outline-offset-3 outline-darkCyan;
+		@apply rounded text-darkCyan ring-3 ring-darkCyan ring-offset-2 ring-offset-white;
 	}
 
 	input {

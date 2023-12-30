@@ -7,10 +7,10 @@ export default {
 	future: { hoverOnlyWhenSupported: true },
 	theme: {
 		extend: {
-			outlineWidth: {
+			ringWidth: {
 				3: '3px',
 			},
-			outlineOffset: {
+			borderWidth: {
 				3: '3px',
 			},
 			spacing: {
