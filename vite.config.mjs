@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import Unimport from 'unimport/unplugin';
 import { fileURLToPath, URL } from 'node:url';
 
 /* prettier-ignore */
@@ -7,6 +8,7 @@ const standardHTMLTags = ['a', 'abbr', 'address', 'area', 'article', 'aside', 'a
 
 export default defineConfig({
 	plugins: [
+		Unimport.vite({ presets: ['vue', 'pinia'] }),
 		vue({
 			template: {
 				compilerOptions: {

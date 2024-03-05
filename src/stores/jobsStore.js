@@ -1,5 +1,3 @@
-import { ref, computed } from 'vue';
-import { defineStore, acceptHMRUpdate } from 'pinia';
 import useGetJobs from '@/composables/useGetJobs.mjs';
 
 const jobs = Object.freeze(await useGetJobs());
@@ -52,4 +50,5 @@ export const useJobsStore = defineStore('jobsStore', () => {
 	};
 });
 
-if (import.meta.hot) import.meta.hot.accept(acceptHMRUpdate(useJobsStore, import.meta.hot));
+const HMR = import.meta.hot;
+if (HMR) HMR.accept(acceptHMRUpdate(useJobsStore, HMR));

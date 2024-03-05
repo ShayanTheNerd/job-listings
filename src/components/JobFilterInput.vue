@@ -1,5 +1,4 @@
 <script setup>
-	import { computed, ref } from 'vue';
 	import { useJobsStore } from '@/stores/jobsStore.js';
 
 	const jobsStore = useJobsStore();

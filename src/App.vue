@@ -1,5 +1,4 @@
 <script setup>
-	import { ref } from 'vue';
 	import TheMain from '@/components/TheMain.vue';
 	import TheHeader from '@/components/TheHeader.vue';
 

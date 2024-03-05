@@ -1,5 +1,4 @@
 <script setup>
-	import { onMounted, ref, watch } from 'vue';
 	import { useElementSize } from '@vueuse/core';
 	import resolveConfig from 'tailwindcss/resolveConfig';
 	import tailwindConfigFile from '../../tailwind.config.js';

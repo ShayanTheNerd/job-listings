@@ -1,6 +1,4 @@
 <script setup>
-	import { computed } from 'vue';
-	import { storeToRefs } from 'pinia';
 	import JobCard from '@/components/JobCard.vue';
 	import { useJobsStore } from '@/stores/jobsStore.js';
 
