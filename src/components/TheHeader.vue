@@ -1,7 +1,5 @@
 <script setup>
 	import { useElementSize } from '@vueuse/core';
-	import resolveConfig from 'tailwindcss/resolveConfig';
-	import tailwindConfigFile from '../../tailwind.config.js';
 	import { useJobsStore } from '@/stores/jobsStore.js';
 	import JobFilterTag from '@/components/JobFilterTag.vue';
 	import JobFilterInput from '@/components/JobFilterInput.vue';
@@ -13,10 +11,9 @@
 	const emit = defineEmits(['searchBoxHeightChange']);
 
 	onMounted(() => {
-		/* prettier-ignore */
-		const { theme: { screens: { lg: tailwindScreenLG } } } = resolveConfig(tailwindConfigFile);
-		const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-		if (viewportWidth >= parseFloat(tailwindScreenLG)) newTagInput.value.focus();
+		const isTouchDevice = matchMedia('(pointer: coarse)').matches;
+
+		if (!isTouchDevice) newTagInput.value.focus();
 	});
 	watch(tagsListHeight, newHight => emit('searchBoxHeightChange', newHight));
 
